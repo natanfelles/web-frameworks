@@ -1,5 +1,6 @@
 language:
-  version: '0.5'
+  version: 0.5
+>>>>>>> 8631ee91 (re-introduce phalcon and spliffy)
   files:
     - "**/*.v"
     - server
