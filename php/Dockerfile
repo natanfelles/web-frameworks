@@ -98,10 +98,6 @@ RUN if [ -f "${EVENT_EXT_FILE}" ] ; then \
       {{/nginx_conf}}
   }\n'\
   > /etc/nginx/conf.d/server.conf
-
-  RUN echo TESTE
-  RUN ls /var/run/
-  RUN ls /usr/local/etc/php/conf.d/
   
   RUN echo 'opcache.enable=1\n\
   opcache.enable_cli=1\n\
