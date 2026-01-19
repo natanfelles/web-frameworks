@@ -30,3 +30,6 @@ framework:
     - msgpack
     - redis
     - yaml
+
+  engines:
+    - php-fpm
