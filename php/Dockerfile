@@ -91,7 +91,7 @@ RUN if [ -f "${EVENT_EXT_FILE}" ] ; then \
       {{^nginx_conf}}
         location / {\n\
           try_files $uri $uri/ /index.php;\n\
-          fastcgi_pass unix:/var/run/php8.5-fpm.sock;\n\
+          fastcgi_pass unix:/var/run/php-fpm.sock;\n\
           fastcgi_param   SCRIPT_FILENAME         $document_root/index.php;\n\
           include fastcgi_params;\n\
         }\n\
