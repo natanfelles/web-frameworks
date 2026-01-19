@@ -2,7 +2,7 @@
   FROM php:{{{.}}}-fpm
 {{/language.version}}
 {{^language.version}}
-  FROM php:8.4-fpm
+  FROM php:8.5-fpm
 {{/language.version}}
 
 RUN apt-get -qq update
@@ -10,7 +10,7 @@ RUN apt-get -qy install --no-install-recommends libzip-dev {{#deps}} {{{.}}} {{/
 
 WORKDIR /usr/src/app
 
-RUN docker-php-ext-install zip opcache
+RUN docker-php-ext-install zip
 
 {{#environment}}
   ENV {{{.}}}
